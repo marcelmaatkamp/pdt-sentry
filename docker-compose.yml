@@ -10,7 +10,7 @@ version: '3.4'
 
 x-defaults: &defaults
   restart: unless-stopped
-  build: .
+  build: pdt-sentry
   depends_on:
     - redis
     - postgres
@@ -47,8 +47,8 @@ services:
 
  web:
   <<: *defaults
-  ports:
-   - '9000:9000'
+#  ports:
+#   - '9000:9000'
 
  cron:
   <<: *defaults
